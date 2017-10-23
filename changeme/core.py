@@ -55,6 +55,10 @@ def main():
     if config.contributors:
         print_contributors(creds)
         quit()
+        
+    if config.categories:
+        print_categories(creds)
+        quit()
 
     if config.dump:
         print_creds(creds)
@@ -206,6 +210,7 @@ def parse_args():
     ap = argparse.ArgumentParser(description='Default credential scanner v%s' % version.__version__)
     ap.add_argument('--all', '-a', action='store_true', help='Scan for all protocols', default=False)
     ap.add_argument('--category', '-c', type=str, help='Category of default creds to scan for', default=None)
+    ap.add_argument('--categories', action='store_true', help='List Categories' , default=False)
     ap.add_argument('--contributors', action='store_true', help='Display cred file contributors')
     ap.add_argument('--debug', '-d', action='store_true', help='Debug output')
     ap.add_argument('--delay', '-dl', type=int, help="Specify a delay in milliseconds to avoid 429 status codes default=500", default=500)
@@ -341,6 +346,21 @@ def in_scope(name, category, cred, protocols):
 
 
 def print_contributors(creds):
+    contributors = set()
+    for cred in creds:
+        cred_contributors = cred['contributor'].split(', ')
+        for c in cred_contributors:
+            contributors.add(c)
+
+    for c in version.contributors:
+        contributors.add(c)
+
+    print("Thank you to our contributors!")
+    for i in sorted(contributors, key=str.lower):
+        print(i)
+    print()
+    
+def print_categories(creds):
     contributors = set()
     for cred in creds:
         cred_contributors = cred['contributor'].split(', ')
