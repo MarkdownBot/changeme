@@ -30,25 +30,25 @@ A convenient way of running changeme is to do so inside a Docker container. You 
 
 ### Run changeme in Docker
 
-1. Download the container: `docker pull ztgrace/changeme`
-2. Run the container: `docker run -it ztgrace/changeme /bin/bash`
+1.  Download the container: `docker pull ztgrace/changeme`
+2.  Run the container: `docker run -it ztgrace/changeme /bin/bash`
 
 ### Build from Dockerfile
 
-1. Build the docker container: `docker build -t changeme .`
-2. Run changeme from inside the container: `docker run -it changeme /bin/bash'
+1.  Build the docker container: `docker build -t changeme .`
+2.  Run changeme from inside the container: \`docker run -it changeme /bin/bash'
 
 ## Usage Examples
 
 Below are some common usage examples.
 
-* Scan a single host: `./changeme.py 192.168.59.100`
-* Scan a subnet for default creds: `./changeme.py 192.168.59.0/24`
-* Scan using an nmap file `./changeme.py subnet.xml`
-* Scan a subnet for Tomcat default creds and set the timeout to 5 seconds: `./changeme.py -n "Apache Tomcat" --timeout 5 192.168.59.0/24`
-* Use [Shodan](https://www.shodan.io/) to populate a targets list and check them for default credentials: `./changeme.py --shodan_query "Server: SQ-WEBCAM" --shodan_key keygoeshere -c camera`
-* Scan for SSH and known SSH keys: `./changeme.py --protocols ssh,ssh_key 192.168.59.0/24`
-* Scan a host for SNMP creds using the protocol syntax: `./changeme.py snmp://192.168.1.20`
+-   Scan a single host: `./changeme.py 192.168.59.100`
+-   Scan a subnet for default creds: `./changeme.py 192.168.59.0/24`
+-   Scan using an nmap file `./changeme.py subnet.xml`
+-   Scan a subnet for Tomcat default creds and set the timeout to 5 seconds: `./changeme.py -n "Apache Tomcat" --timeout 5 192.168.59.0/24`
+-   Use [Shodan](https://www.shodan.io/) to populate a targets list and check them for default credentials: `./changeme.py --shodan_query "Server: SQ-WEBCAM" --shodan_key keygoeshere -c camera`
+-   Scan for SSH and known SSH keys: `./changeme.py --protocols ssh,ssh_key 192.168.59.0/24`
+-   Scan a host for SNMP creds using the protocol syntax: `./changeme.py snmp://192.168.1.20`
 
 See [Wiki Examples](https://github.com/ztgrace/changeme/wiki/Examples) for more detailed examples.
 
@@ -56,11 +56,11 @@ See [Wiki Examples](https://github.com/ztgrace/changeme/wiki/Examples) for more 
 
 The telnet scanner is broken.
 
-Additionally, anything filed under https://github.com/ztgrace/changeme/issues as a bug.
+Additionally, anything filed under <https://github.com/ztgrace/changeme/issues> as a bug.
 
 ## Bugs and Enhancements
 
-Bugs and enhancements are tracked at [https://github.com/ztgrace/changeme/issues](https://github.com/ztgrace/changeme/issues).
+Bugs and enhancements are tracked at <https://github.com/ztgrace/changeme/issues>.
 
 **Request a credential:** Please add an issue to Github and apply the credential label.
 
@@ -72,8 +72,8 @@ Please see the [wiki](https://github.com/ztgrace/changeme/wiki) for more details
 
 Thanks for code contributions and suggestions.
 
-* @AlessandroZ
-* @m0ther_
-* @GraphX
-* @Equinox21_
-* https://github.com/ztgrace/changeme/graphs/contributors
+-   @AlessandroZ
+-   @m0ther\_
+-   @GraphX
+-   @Equinox21\_
+-   <https://github.com/ztgrace/changeme/graphs/contributors>
